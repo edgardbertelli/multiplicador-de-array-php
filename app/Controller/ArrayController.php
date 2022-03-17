@@ -6,7 +6,7 @@ class ArrayController
     private array $array;
 
     /**
-     * Inicia um array.
+     * Cria uma instância da classe ArrayController.
      * 
      * @return void
      */
@@ -14,7 +14,7 @@ class ArrayController
     {
         $this->array = $this->random();
     }
-    
+
     /**
      * Retorna um array com dez elementos de valores numéricos randômicos.
      * 
@@ -41,7 +41,7 @@ class ArrayController
         $multipliedArray = array();
 
         foreach ($this->array as $key => $value) {
-            array_push($multipliedArray,[
+            array_push($multipliedArray, [
                 "$key x $value" => $key * $value
             ]);
         }
