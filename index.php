@@ -6,8 +6,12 @@
  * Desenvolvido em 16/3/2022
  */
 
+ error_reporting(E_ALL);
+ ini_set('display_errors', 1);
+
 require_once(dirname(__FILE__) . '/inc/API.php');
-require_once(dirname(__FILE__) . '/inc/ArrayController.php');
+require_once(dirname(__FILE__) . '/Controller/ArrayController.php');
+require_once(dirname(__FILE__) . '/inc/Route.php');
 
 // Inicia a aplicação.
 $api = new API();
@@ -22,5 +26,4 @@ if (!$api->checkMethod($_SERVER['REQUEST_METHOD'])) {
     die;
 }
 
-$array = new ArrayController();
-return $array->multiply();
+Route::get('home', "ArrayController@multiply");

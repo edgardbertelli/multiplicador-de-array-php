@@ -47,6 +47,16 @@ class API
     }
 
     /**
+     * Retorna o endpoint da requisição.
+     * 
+     * @return string
+     */
+    public function getEndpoint()
+    {
+        return $this->data['endpoint'];
+    }
+
+    /**
      * Retorna uma mensagem de erro alguns dados da requisição.
      * 
      * @param  string  $message     Mensagem de erro (opcional).

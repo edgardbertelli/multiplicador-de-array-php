@@ -2,6 +2,7 @@
 
 class ArrayController
 {
+    /** @var array  Array de números inteiros randômicos. */
     private array $array;
 
     /**
